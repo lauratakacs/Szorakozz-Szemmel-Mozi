@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Szórakozz Szemmel Mozi</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Szórakozz Szemmel Mozi</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">A moziról</a></li>
+							<li><a href="foglalas.html">Foglalás</a></li>
+							<li><a href="kapcsolat.html">Kapcsolat</a></li>
+							<li><a href="uzenetek.html">Üzenetek</a></li>
+							<li class="active"><a href="crud.html">Kedvenc filmjeitek</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<article id="crud">
+							<h2 class="major"><center>Kedvenc filmek</center></h2>
+							<h3><center>Osszátok meg kedvenc filmjeiteket velünk! <br>
+								Itt hozzá tudtok adni a listához általatok kedvelt filmeket!</center></h3>
+						
+							<center><button id="read-button">Megosztott filmek</button></center>
+						
+							<!-- Create Form -->
+							<div id="create-form-container">
+								<h3>Új Film hozzáadása</h3>
+								<form id="create-form">
+									<div>
+										<label for="create-nev">Filmcím:</label>
+										<input type="text" id="create-filmcim" name="filmcim" required>
+									</div>
+									<div>
+										<label for="create-mufaj">Műfaj:</label>
+										<select id="create-mufaj" name="mufaj" required>
+											<option value="">Válassz</option>
+											<option value="1">Dráma</option>
+											<option value="2">Vígjáték</option>
+											<option value="3">Krimi</option>
+											<option value="4">Kalandfilm</option>
+											<option value="5">Animációs</option>
+											<option value="6">Thriller</option>
+											<option value="7">Természetfilm</option>
+											<option value="8">Fantasy</option>
+											<option value="9">Ifjúsági</option>
+											<option value="10">Játékfilm</option>
+											<option value="11">Zenés</option>
+											<option value="12">Horror</option>
+											<option value="13">Egyéb</option>
+										</select>
+									</div>
+									<div>	
+											<label for="creat-szarmazas">Származás:</label>
+											<select id="create-szarmazas" name="szarmazas" required>
+											<option value="">Összes</option>
+											<option value="1">Német</option>
+											<option value="2">Amerikai</option>
+											<option value="3">Angol</option>
+											<option value="4">Japán</option>
+											<option value="5">Spanyol</option>
+											<option value="6">Francia</option>
+											<option value="7">Magyar</option>
+											<option value="8">Kanadai</option>
+											<option value="9">Német</option>
+											<option value="10">Olasz</option>
+											<option value="11">Új-Zélandi</option>
+											<option value="12">Dán</option>
+											<option value="13">Egyéb</option>
+										</select>
+										</div>
+									<div>
+										<label for="create-hossz">Film hossza:</label>
+										<input type="text" id="create-hossz" name="hossz" required>
+									</div>
+									<button type="submit">Film hozzáadása</button>
+								</form>
+							</div>
+						
+							<!-- Update Form -->
+							<div id="update-form-container">
+								<h3>Film módosítása</h3>
+								<form id="update-form">
+									<div>
+										<label for="update-filmcim">Filmcím:</label>
+										<input type="text" id="update-filmcim" name="filmcim">
+									</div>
+									<div>
+										<label for="update-mufaj">Műfaj:</label>
+										<select id="update-mufaj" name="mufaj">
+											<option value="">Válassz</option>
+											<option value="1">Dráma</option>
+											<option value="2">Vígjáték</option>
+											<option value="3">Krimi</option>
+											<option value="4">Kalandfilm</option>
+											<option value="5">Animációs</option>
+											<option value="6">Thriller</option>
+											<option value="7">Természetfilm</option>
+											<option value="8">Fantasy</option>
+											<option value="9">Ifjúsági</option>
+											<option value="10">Játékfilm</option>
+											<option value="11">Zenés</option>
+											<option value="12">Horror</option>
+											<option value="13">Egyéb</option>
+										</select>
+									</div>
+									<div>
+										<label for="update-szarmazas">Származás:</label>
+										<select id="update-szarmazas" name="szarmazas" required>
+											<option value="">Összes</option>
+											<option value="1">Német</option>
+											<option value="2">Amerikai</option>
+											<option value="3">Angol</option>
+											<option value="4">Japán</option>
+											<option value="5">Spanyol</option>
+											<option value="6">Francia</option>
+											<option value="7">Magyar</option>
+											<option value="8">Kanadai</option>
+											<option value="9">Német</option>
+											<option value="10">Olasz</option>
+											<option value="11">Új-Zélandi</option>
+											<option value="12">Dán</option>
+											<option value="13">Egyéb</option>
+									</select>
+									</div>
+									<div>
+										<label for="update-hossz">Film hossza:</label>
+										<input type="text" id="update-hossz" name="hossz" required>
+									</div>
+									<button type="submit">Film módosítása</button>
+								</form>
+							</div>
+						
+							<!-- Delete Form -->
+							<div id="delete-form-container">
+								<h3>Film törlése</h3>
+								<form id="delete-form">
+									<div>
+										<label for="delete-filmcim">Filmcím:</label>
+										<input type="text" id="delete-filmcim" name="filmcim" required>
+									</div>
+									<button type="submit">Film törlése</button>
+								</form>
+							</div>
+						
+							<!-- Read Section -->
+							<div id="read-container"></div>
+						</article>
+
+
+					</div>
+
+				<!-- Footer -->
+                <footer id="footer">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="name">Név</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Üzenet</label>
+                                    <textarea name="message" id="message" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Küldés" /></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section class="split contact">
+                        <section class="alt">
+                            <h3>Cím</h3>
+                            <p>Kecskemét, Vászon utca 7.<br />
+                            Magyarország</p>
+                        </section>
+                        <section>
+                            <h3>Telefonszám</h3>
+                            <p>+3630/746-1234</p>
+                        </section>
+                        <section>
+                            <h3>E-mail</h3>
+                            <p>szorakozzszemmel@mozi.com</p>
+                        </section>
+                        <section>
+                            <h3>Social</h3>
+                            <ul class="icons alt">
+                                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </footer>
+
+            <!-- Copyright -->
+                <div id="copyright">
+                    <ul><li>&copy; Minden jog fenntartva</li><li>Design: <a href="https://html5up.net">Szórakozz szemmel Mozi támogatója: HTML5UP</a></li></ul>
+                </div>
+
+        </div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

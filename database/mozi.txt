@@ -1,0 +1,43 @@
+moziazon	mozinev	irszam	cim	telefon
+1	A38 Hajó	1113	Petõfi híd budai hídfõ	4643940
+2	Bárka Kikötõ a Ráday utcában	1092	Ráday utca	
+3	Bem	1024	Margit krt. 5/b.	3168708
+4	Budapesti Európai Ifjúsági Központ	1024	Zivatar u. 1-3.	2124080
+5	Cervantes Intézet	1000	Vörösmarty u. 32.	
+6	Cinema City Csepel Plaza	1212	Rákóczi F. út 154-170.	4258111
+7	Cinema City Új Udvar	1036	Bécsi út 38-44.	4378383
+8	Cirko-Gejzír	1055	Balassi Bálint u. 15-17.	2690904
+9	Corvin Budapest Filmpalota	1082	Corvin köz 1.	4595050
+10	Erlin 9 galéria	1000	Ráday utca	
+11	FilmesHáz	1092	Ráday utca 31/K	
+12	Hollywood Multiplex Duna Plaza	1138	Váci út 178. (Duna Plaza)	4674267
+13	Hollywood Multiplex Lurdy Ház	1092	Mester utca és Könyves Kálmán körút sarok	4674267
+14	Hollywood Multiplex Óbuda	1030	Bécsi út 154. (Eurocenter)	4674267
+15	Hollywood Multiplex Pólus	1152	Szentmihályi út 131.	4674267
+16	Hunnia	1073	Erzsébet krt. 26.	
+17	Jailhouse Club	1094	IX. kerület, Tûzoltó utca 22.	9894905
+18	Jókai klub	1121	Hollós út 5.	3925452
+19	Kis Erkel	1000	Ráday utca	
+20	Kossuth Mozi	1132	Váci út 14.	4674260
+21	Kultiplex	1095	Kinizsi u. 28.	2190706
+22	Millenáris Fogadó	1024	Kisrókus u. 16-20.	4361717
+23	Mûcsarnok	1406	Hõsõk tere	
+24	Mûvész	1066	Teréz krt. 30.	3326726
+25	Mûvészetek Palotája	1095	Komor Marcell u. 1.	5553000
+26	Odeon-Lloyd mozi	1136	Hollán Ernõ utca 7.	3292064
+27	Örökmozgó	1073	Erzsébet krt. 39.	3422167
+28	Palace Campona	1222	Nagytétényi út 37-43.	3458160
+29	Palace Mammut	1024	Lövõház u. 2-6.	3458160
+30	Palace MOM Park	1123	Alkotás út 53.	3458160
+31	Palace Westend	1062	Váci út 1-3.	3365555
+32	Puskin	1053	Kossuth L. u. 18.	4296080
+33	Ráday könyves ház	1000	Ráday utca	
+34	Sambhala Tibet Központ	1088	Lõrinc pap tér 2.	2668084
+35	Science Park	1117	Irínyi József u. 4.-20.	
+36	Szimpla Kert Mozi	1075	Kazinczy u. 14.	3215880
+37	Szindbád	1137	Szent István krt. 16.	3492773
+38	Tabán	1016	Krisztina krt. 87-89.	3568162
+39	Toldi	1054	Bajcsy-Zsilinszky út 36-38.	4720397
+40	Tûzraktár	1094	Tûzoltó u. 54-56	
+41	Uránia Nemzeti Filmszínház	1088	Rákóczi út 21.	4863413
+42	Vörösmarty	1075	Üllõi út 4.	3174542

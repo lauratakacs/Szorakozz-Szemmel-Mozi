@@ -35,53 +35,14 @@ app.get('/uzenetek.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'uzenetek.html'));
 });
 
-app.get('/api/adatok', (req, res) => {
-    const { katid, ertekid, nev } = req.query;
-    let query = `
-        SELECT allat.nev, allat.katid, allat.ertekid, allat.ev, mozi.nev AS mozi_nev, ertek.forint
-        FROM allat
-        JOIN mozi ON allat.katid = mozi.id
-        JOIN ertek ON allat.ertekid = ertek.id
-        WHERE 1=1
-    `;
-    const params = [];
+// CRUD végpontok a film táblához
 
-    if (katid) {
-        query += ' AND allat.katid = ?';
-        params.push(katid);
-    }
-
-    if (ertekid) {
-        query += ' AND allat.ertekid = ?';
-        params.push(ertekid);
-    }
-
-    if (nev) {
-        query += ' AND allat.nev LIKE ?';
-        params.push(`%${nev}%`);
-    }
-
-
-    db.query(query, params, (err, results) => {
-        if (err) {
-            console.error('Error:', err);
-            res.status(500).send('Error fetching data');
-        } else {
-            res.json(results);
-        }
-    });
-});
-
-// CRUD végpontok az allat táblához
-
-// Read
-app.get('/api/allatok', (req, res) => {
+// Read - Lekérdezés a film táblából, három oszlopra korlátozva
+app.get('/api/filmek', (req, res) => {
     const query = `
-        SELECT allat.id, allat.nev, mozi.nev AS mozi_nev, ertek.forint, allat.ev
-        FROM allat
-        JOIN mozi ON allat.katid = mozi.id
-        JOIN ertek ON allat.ertekid = ertek.id
-        ORDER BY allat.nev ASC
+        SELECT film.filmcim AS FilmCim, film.szinkron AS Szinkron, film.mufaj AS Mufaj
+        FROM film
+        ORDER BY film.filmcim ASC
     `;
     db.query(query, (err, results) => {
         if (err) {
@@ -93,76 +54,50 @@ app.get('/api/allatok', (req, res) => {
     });
 });
 
-// Create
-app.post('/api/allatok', (req, res) => {
-    const { nev, katid, ertekid, ev } = req.body;
-    const query = 'INSERT INTO allat (nev, katid, ertekid, ev) VALUES (?, ?, ?, ?)';
-    db.query(query, [nev, katid, ertekid, ev], (error, results) => {
+// Create - Új film hozzáadása
+app.post('/api/filmek', (req, res) => {
+    const { filmcim, szinkron, mufaj, szines, szarmazas, hossz } = req.body;
+    const query = 'INSERT INTO film (filmcim, szinkron, mufaj, szines, szarmazas, hossz) VALUES (?, ?, ?, ?, ?, ?)';
+    db.query(query, [filmcim, szinkron, mufaj, szines, szarmazas, hossz], (error, results) => {
         if (error) {
             console.error('Error:', error);
             res.status(500).send('Error saving data');
         } else {
-            res.send('Data saved successfully');
+            res.send('Film adatok sikeresen mentve');
         }
     });
 });
 
-// Update
-app.put('/api/allatok/:id', (req, res) => {
+// Update - Film adatok frissítése
+app.put('/api/filmek/:id', (req, res) => {
     const { id } = req.params;
-    const { nev, katid, ertekid, ev } = req.body;
-    const query = 'UPDATE allat SET nev = ?, katid = ?, ertekid = ?, ev = ? WHERE id = ?';
-    db.query(query, [nev, katid, ertekid, ev, id], (error, results) => {
+    const { filmcim, szinkron, mufaj, szines, szarmazas, hossz } = req.body;
+    const query = 'UPDATE film SET filmcim = ?, szinkron = ?, mufaj = ?, szines = ?, szarmazas = ?, hossz = ? WHERE fkod = ?';
+    db.query(query, [filmcim, szinkron, mufaj, szines, szarmazas, hossz, id], (error, results) => {
         if (error) {
             console.error('Error:', error);
             res.status(500).send('Error updating data');
         } else {
-            res.send('Data updated successfully');
+            res.send('Film adatok sikeresen frissítve');
         }
     });
 });
 
-// Delete
-app.delete('/api/allatok/:id', (req, res) => {
+// Delete - Film törlése
+app.delete('/api/filmek/:id', (req, res) => {
     const { id } = req.params;
-    const query = 'DELETE FROM allat WHERE id = ?';
+    const query = 'DELETE FROM film WHERE fkod = ?';
     db.query(query, [id], (error, results) => {
         if (error) {
             console.error('Error:', error);
             res.status(500).send('Error deleting data');
         } else {
-            res.send('Data deleted successfully');
+            res.send('Film sikeresen törölve');
         }
     });
 });
 
-app.post('/kapcsolat', (req, res) => {
-    const { name, email, message } = req.body;
-    const query = 'INSERT INTO kapcsolat (name, email, message) VALUES (?, ?, ?)';
-    db.query(query, [name, email, message], (error, results) => {
-        if (error) {
-            console.error('Error:', error);
-            res.status(500).send('Error saving data');
-        } else {
-            res.send('Data saved successfully');
-        }
-    });
-});
-
-app.get('/uzenetek', (req, res) => {
-    const query = 'SELECT * FROM kapcsolat ORDER BY created_at DESC';
-    db.query(query, (error, results) => {
-        if (error) {
-            console.error('Error:', error);
-            res.status(500).send('Error fetching data');
-        } else {
-            res.json(results);
-        }
-    });
-});
-
-const port = 8026;
+const port = 8040;
 app.listen(port, () => {
-    console.log('Server is running at http://localhost:${port}');
+    console.log(`Server is running at http://localhost:${port}`);
 });
-
